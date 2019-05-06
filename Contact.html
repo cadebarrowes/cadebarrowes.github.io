@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Cade Barrowes</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body class="parallax">
+
+    <a name="top"></a>
+    <nav>
+        <ul>
+			<li><a href="Home.html#top2">Home</a></li>
+			<li><a href="Videos.html">Videos</a></li>
+			<li><a href="#top" class="active">Contact</a></li>
+			<li style="float:right"><a href="#p2sec">About</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h1>Contact Form</h1>
+        <article>
+			<fieldset>
+				<form action="Contact.html">
+					First name:<br>
+					<input type="text" name="firstname">
+					<br>Last name:<br>
+					<input type="text" name="lastname"><br><br>
+					<input type="radio" name="gender" value="male"> Male<br>
+					<input type="radio" name="gender" value="female"> Female<br>
+					<input type="radio" name="gender" value="robot" checked> Robot<br>
+					<input type="radio" name="gender" value="other"> Other<br>
+					<br>Comments, concerns, or snide remarks<br>
+					<textarea name="comments" rows="8" cols="50">Your company is the greatest! I give 6 out of 5 stars!</textarea>
+					<br><br><br>
+					<button type="button" onclick="alert('Your response has been sent to the complaints department.')">Submit</button><br>
+					This will all be evaluated by the <a href="images/trash.jpg">complaints department.</a>
+				</form>
+			</fieldset>
+        </article>
+    </section>
+
+    <footer>
+        Copyright Cade Barrowes © 2019
+        <br>
+        <a href="#top">Back To Top</a>
+    </footer>
+
+</body>
+
+</html>
