@@ -1,4 +1,4 @@
-:root {
+ :root {
 	--green: #C2EABD;
 	--green2: #95D68D;
 	--tea: #066A37;
@@ -75,7 +75,7 @@ body {
 
 body {
 	font-family: "Segoe UI", Helvetica, sans-serif;
-	font-size: 15px;
+	font-size: 5vw;
 	line-height: 1.5;
 	margin: 0px;
 	color: var(--plat);
@@ -95,6 +95,8 @@ header {
 	width: 100%;
 	height: 100vh;
 	float: center;
+	padding-left:0px;
+	padding-right:0px;
 	padding-top: 35%;
 	padding-bottom: 0px;
 	margin: 0px;
@@ -102,11 +104,11 @@ header {
 
 header h1 {
 	color: var(--green);
-	font-size: 80px;
+	font-size: 7vw;
 	font-weight: bold;
 	text-align: center;
 	position: absolute;
-	top: 40%;
+	top: 37%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	background-attachment: fixed;
@@ -224,4 +226,16 @@ html,
 body {
 	max-width: 100%;
 	overflow-x: hidden;
+}
+
+@media screen and (max-width: 800px) {
+	nav li {
+		width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+	}
+	nav {
+		position: relative;
+	}
+	section {
+		width:80%;
+	}
 }
