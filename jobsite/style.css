@@ -1,10 +1,7 @@
 :root {
-	--green: #c10000;
-	--green2: #ff4949;
+	--color: #c10000;
+	--color2: #ff4949;
 	--tea: #eeeeee;
-	--aqua: rgb(252, 208, 11);
-	--blue: rgb(255, 238, 143);
-	--blue2: rgb(255, 229, 79);
 	--lead: #B3B3B3;
 	--plat: #dedede;
 	--ash: #999999;
@@ -157,16 +154,16 @@ nav li a:hover {
 }
 
 .active {
-	background-color: var(--green2);
+	background-color: var(--color2);
 }
 
 nav a {
-	color: var(--green2);
+	color: var(--color2);
 	text-decoration: none;
 }
 
 section {
-	background-color: var(--green);
+	background-color: var(--color);
 	color: white;
 	width: 60%;
 	height: auto;
