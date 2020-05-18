@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Cade Barrowes</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body class="parallax">
+
+    <a name="top"></a>
+
+    <section style="text-align: center; background-color:#5dba68"">
+        <a name=" par">
+        <h1>Decoder</h1>
+        </a>
+        <p>-passphrase-</p>
+        <input style="text-align: center;" type="text" id="key" oninput="decode()">
+        <br>
+        <p>-encoded text-</p>
+        <textarea style="text-align: center;" type="text" id="input" rows="8" cols="50" oninput="decode()"></textarea>
+        <br>
+        <p>-decoded text-</p>
+        <article
+            style="text-align: center; width: 90%; float: center; margin-left: auto; margin-right: auto; color:#5dba68">
+            <p id=decode></p>
+        </article>
+    </section>
+
+
+
+    <script>
+        function decode() {
+            var input = document.getElementById("input").value;
+            var key = document.getElementById("key").value;
+            var newText = "";
+            var offset = 0;
+            var i = 0;
+            for (i = 0; i < input.length; i++) {
+                if (input.charAt(i) == ' ') {
+                    newText += ' ';
+                    offset++;
+                    continue;
+                }
+                if (input.charAt(i) == '\n') {
+                    newText += '\n';
+                    offset = i+1; // I haven't figured out why I'm using i or adding one, but it works?
+                    continue;
+                }
+                // uses char offsets and modulus to
+                newText += String.fromCharCode((((input.charAt(i).toLowerCase().charCodeAt(0)) 
+                - (key.charAt((i - offset) % key.length).toLowerCase().charCodeAt(0) % 97) - 97 + 26) % 26) + 97);
+            }
+            newText = newText.replace(/\r?\n/g, '<br />');
+            document.getElementById("decode").innerHTML = newText;
+        }
+    </script>
+
+</body>
+
+</html>
